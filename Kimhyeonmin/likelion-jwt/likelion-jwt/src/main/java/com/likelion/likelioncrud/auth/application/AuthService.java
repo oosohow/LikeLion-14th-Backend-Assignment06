@@ -49,6 +49,7 @@ public class AuthService {
                 .name(request.name())
                 .email(request.email())
                 .password(passwordEncoder.encode(request.password()))  // 비밀번호 암호화
+                .part(request.part())
                 .build();
 
         // 3. DB 저장
